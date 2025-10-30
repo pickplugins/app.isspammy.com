@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
 
 	return (
 		<div className={`flex min-h-screen w-screen`}>
-			<div className="border-r border-gray-400">
+			<div className="border-r border-gray-400 bg-gray-700">
 				<Sidebar />
 			</div>
 			<main className="flex-1 bg-gray-100">

@@ -27,7 +27,7 @@ const Sidebar = ({ user }) => {
 	var navs = [
 		// { label: "Products", value: "products" },
 		{ label: t("Dashboard"), value: "dashboard", icon: <IconDashboard /> },
-		{ label: t("Tasks"), value: "tasks", icon: <IconList /> },
+		// { label: t("Tasks"), value: "tasks", icon: <IconList /> },
 		{ label: t("Orders"), value: "orders", icon: <IconBasketCheck /> },
 		{
 			label: t("Subscriptions"),
@@ -76,10 +76,10 @@ const Sidebar = ({ user }) => {
 
 	return (
 		<aside
-			className={`max-w-[300px]  flex flex-col h-screen  text-gray-800 px-5 py-5 fixed md:static inset-y-0 left-0 z-50 transform bg-white transition-transform duration-200 ease-in-out md:transform-none
+			className={`max-w-[300px]  flex flex-col h-screen  text-gray-800 px-5 py-5 fixed md:static inset-y-0 left-0 z-50 transform bg-gray-700 transition-transform duration-200 ease-in-out md:transform-none
 					${navToggle ? "translate-x-0" : "-translate-x-full"} ${!navToggle && "lg:w-[300px] "
 				}`}>
-			<div className="bg-white pb-3 block mb-5 border-b relative">
+			<div className=" pb-3 block mb-5 border-b relative">
 				<button
 					onClick={() => setnavToggle(!navToggle)}
 					className="md:hidden p-2 rounded-lg text-error-500 absolute top-0 right-0 bg-red-500 !hover:bg-red-600 text-white">
@@ -92,9 +92,10 @@ const Sidebar = ({ user }) => {
 					<div
 						className={` md:block text-3xl"
 						} flex gap-3 justify-between items-center w-full`}>
-						<div className="flex gap-3 items-center justify-between">
+						<div className="flex gap-3 items-center justify-center">
 							<Link to={`/`} className="text-center">
-								<img src="/logo-h.png" className="mx-auto" width={140} alt="" />
+								<div className="font-bold text-3xl text-white ">IsSpammy</div>
+								{/* <img src="/logo-h.png" className="mx-auto" width={140} alt="" /> */}
 							</Link>
 						</div>
 					</div>
@@ -123,9 +124,9 @@ const Sidebar = ({ user }) => {
 									key={index}
 									to={`/${nav.value}`}
 									className={`${currentLocation == "/" + nav.value
-										? "bg-amazon-600 text-white"
-										: "bg-white"
-										} hover:bg-amazon-600 hover:text-white mb-2 rounded-sm  text-gray-500 border-0  border-solid border-gray-300 cursor-pointer px-4 py-2 flex items-center gap-2`}>
+										? "bg-gray-600 text-white"
+										: "bg-gray-500 text-white"
+										} hover:bg-gray-600 hover:text-white mb-2 rounded-sm  text-gray-500 border-0  border-solid border-gray-300 cursor-pointer px-4 py-2 flex items-center gap-2`}>
 									<span className="">{nav.icon}</span>{" "}
 									<span
 									// className={`${navToggle ? "hidden" : "hidden md:block"}`}

@@ -36,7 +36,7 @@ const Accounts = () => {
 				<div className=" px-3 py-2 rounded-sm bg-amber-600  text-white cursor-pointer flex items-center gap-3">
 					<IconShoppingCart />
 					<a
-						href="https://pickplugins.lemonsqueezy.com/buy/62eb8580-ca3f-441f-8ef2-c1efe297e8e4?embed=1"
+						href="https://isspammy.lemonsqueezy.com/buy/b9cd81bc-e4bc-4f11-9f35-f3e0856b2610"
 						className="lemonsqueezy-button ">
 						{t("Buy Credits")}
 					</a>
