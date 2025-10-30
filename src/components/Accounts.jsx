@@ -17,7 +17,6 @@ const Accounts = () => {
 
 	var [buyCreditsPrams, setbuyCreditsPrams] = useState({ showPopup: false });
 	var [hasCredit, sethasCredit] = useState(true);
-	var [modal, setmodal] = useState(false);
 	const [creditShow, setCreditShow] = useState(false);
 
 	useEffect(() => {
@@ -117,41 +116,61 @@ const Accounts = () => {
 									)}
 								</div>
 
-								<div title={userData?.name} className=" relative">
-									<div
-										className="w-10 h-10 rounded-full overflow-hidden border border-gray-500 cursor-pointer "
-										onClick={(ev) => {
-											setmodal(!modal);
-										}}>
-										<img
-											className="w-full"
-											src={userData?.avatar}
-											alt={userData?.name}
-										/>
+
+
+
+
+
+
+
+
+
+								<div title={userData?.name} className=" relative flex flex-col gap-3">
+
+
+									<div className="flex gap-3 text-white items-center">
+
+										<div
+											className="w-10 h-10 rounded-full overflow-hidden border border-gray-500  "
+										>
+											<img
+												className="w-full"
+												src={userData?.avatar}
+												alt={userData?.name}
+											/>
+										</div>
+
+										<div className="">
+											{userData?.name}
+										</div>
+
+
 									</div>
 
-									{modal && (
-										<div className="absolute z-[99] shadow-lg border border-gray-200 left-1/2 -translate-x-1/2 mb-2 bottom-[100%] bg-white p-3 w-[300px] rounded-sm">
-											<div className="mb-3">
-												{t("Welcome")}! {userData?.name}
-											</div>
-
-											<div className="flex gap-3 items-center">
-												<Link
-													to={`/editprofile`}
-													className="p-2 inline hover:bg-amazon-400 rounded-sm cursor-pointer px-4 bg-amazon-600 text-white">
-													{t("Edit Profile")}
-												</Link>
-												<div
-													className="p-2 inline hover:bg-amazon-400 rounded-sm cursor-pointer px-4 bg-amazon-600 text-white"
-													onClick={(ev) => {
-														handleLogout();
-													}}>
-													{t("Logout")}
-												</div>
-											</div>
+									<div className="flex gap-3 items-center">
+										<Link
+											to={`/editprofile`}
+											className="p-2 inline hover:bg-amazon-500 rounded-sm cursor-pointer px-4 bg-amazon-600 text-white">
+											{t("Edit Profile")}
+										</Link>
+										<div
+											className="p-2 inline hover:bg-red-500 rounded-sm cursor-pointer px-4 bg-red-400 text-white"
+											onClick={(ev) => {
+												handleLogout();
+											}}>
+											{t("Logout")}
 										</div>
-									)}
+
+
+									</div>
+
+
+
+
+
+
+
+
 								</div>
 							</div>
 						)}

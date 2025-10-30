@@ -209,9 +209,9 @@ function Orders({ user }) {
 		return (
 			<td className="text-center pl-5"
 				key={columnIndex}>
-				<Link className="text-left text-amazon-600 font-bold" to={`/apikeys/${entry.id}`}>
-					{"#" + entry.id}
-				</Link>
+				{/* <Link className="text-left text-amazon-600 font-bold" to={`/orders/${entry.id}`}> */}
+				{"#" + entry.id}
+				{/* </Link> */}
 			</td>
 
 		);

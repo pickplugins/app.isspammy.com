@@ -76,7 +76,7 @@ const Sidebar = ({ user }) => {
 
 	return (
 		<aside
-			className={`max-w-[300px]  flex flex-col h-screen  text-gray-800 px-5 py-5 fixed md:static inset-y-0 left-0 z-50 transform bg-gray-700 transition-transform duration-200 ease-in-out md:transform-none
+			className={`w-[300px]  flex flex-col h-screen  text-gray-800 px-5 py-5 fixed md:static inset-y-0 left-0 z-50 transform bg-gray-700 transition-transform duration-200 ease-in-out md:transform-none
 					${navToggle ? "translate-x-0" : "-translate-x-full"} ${!navToggle && "lg:w-[300px] "
 				}`}>
 			<div className=" pb-3 block mb-5 border-b relative">
